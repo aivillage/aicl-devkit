@@ -5,14 +5,3 @@ services:
     build: ./example
     ports:
       - "8080:8080"
-
-  openai-sender:
-    build: .
-    env_file:
-      - .env
-    environment:
-      - API_URL=${API_URL:-http://example-server:8080/moderate}
-      - NUM_CONCURRENT=${NUM_CONCURRENT:-3}
-      - REQUESTS_PER_SECOND=${REQUESTS_PER_SECOND:-2}
-    depends_on:
-      - example-server
