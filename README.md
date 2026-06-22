@@ -28,8 +28,8 @@ Each sample in `data/data.json` has a `label` (`"benign"` or `"malicious"`) and 
       {"role": "assistant", "content": "What would you like to report?"},
       {"role": "user", "content": "My bicycle was stolen."},
       ...
+      {"role": "report", "content": "On [Current Date], a theft was reported..."},
     ],
-    "report": "On [Current Date], a theft was reported..."
   }
 }]
 ```
@@ -43,7 +43,6 @@ The moderation endpoint receives JSON with `messages` and an optional `report` f
   "messages": [
     {"role": "assistant", "content": "..."},
     {"role": "user", "content": "..."}
-  ],
-  "report": "Report summary..."  // optional, included only on the final request
+  ],  
 }
 ```
