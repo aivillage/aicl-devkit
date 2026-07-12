@@ -11,7 +11,7 @@ async def moderate(request):
         print(f", report: {report[:60]}...")
     else:
         print()
-    return web.json_response({"block": true, "reason": "malicious content detected"})
+    return web.json_response({"block": True, "reason": "malicious content detected"})
 
 
 async def health(request):
